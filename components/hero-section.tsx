@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-16 lg:pt-20">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-28 lg:pt-20">
       <div className="absolute inset-0 bg-[url('/serene-nature-landscape-with-soft-mountains-and-ca.jpg')] bg-cover bg-center opacity-10" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

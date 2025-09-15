@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Heart, Menu, Calendar, Phone } from "lucide-react"
+import { Heart, Menu, X, Calendar, Phone } from "lucide-react"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("inicio")
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +40,7 @@ export function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" })
     }
+    setIsMobileMenuOpen(false) // Cerrar menú móvil al navegar
   }
 
   const navItems = [
@@ -117,68 +118,60 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="lg:hidden text-gray-900"
-              >
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-80 bg-white">
-              <div className="flex items-center gap-2 mb-8">
-                <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-                  <Heart className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-gray-900">
-                    Psicología Online
-                  </span>
-                  <div className="text-sm text-emerald-600">Chillán</div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                {navItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                      activeSection === item.id
-                        ? "bg-emerald-50 text-emerald-600 font-medium"
-                        : "text-gray-600 hover:bg-gray-50"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="mt-8 space-y-3">
-                <Button
-                  variant="outline"
-                  className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-50 cursor-pointer"
-                  onClick={() => scrollToSection("contacto")}
-                >
-                  <Phone className="h-4 w-4 mr-2" />
-                  Contactar
-                </Button>
-                <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
-                  onClick={() => scrollToSection("contacto")}
-                >
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Agendar Cita
-                </Button>
-              </div>
-
-            </SheetContent>
-          </Sheet>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden text-gray-900 p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-b border-gray-200 shadow-lg">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="space-y-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                    activeSection === item.id
+                      ? "bg-emerald-50 text-emerald-600 font-medium"
+                      : "text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            
+            <div className="mt-4 pt-4 border-t border-gray-200 space-y-2">
+              <Button
+                variant="outline"
+                className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer"
+                onClick={() => scrollToSection("contacto")}
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Contactar
+              </Button>
+              <Button
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer"
+                onClick={() => scrollToSection("contacto")}
+              >
+                <Calendar className="h-4 w-4 mr-2" />
+                Agendar Cita
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
