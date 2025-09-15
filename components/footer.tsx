@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart, MapPin, Phone, Mail, Clock } from "lucide-react"
+import { Heart, MapPin, Phone, Mail, Clock, Instagram } from "lucide-react"
 
 export function Footer() {
   const handleWhatsAppClick = () => {
@@ -8,6 +8,14 @@ export function Footer() {
     const message = "Hola! Me interesa saber más sobre los servicios de psicología online. ¿Podrían brindarme más información?"
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
+  }
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:psicologiaonlineypresencial14@gmail.com"
+  }
+
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/psicologia_online_presencial", '_blank')
   }
   return (
     <footer className="bg-gray-900 text-white py-16">
@@ -46,15 +54,25 @@ export function Footer() {
                 className="flex items-center gap-2 cursor-pointer hover:text-emerald-400 transition-colors"
                 onClick={handleWhatsAppClick}
               >
-                <Phone className="h-4 w-4 text-emerald-400" />
+                <Phone className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <span>+56 9 9940 6614</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-emerald-400" />
-                <span>contacto@psicologiachillan.cl</span>
+              <div 
+                className="flex items-center gap-2 cursor-pointer hover:text-emerald-400 transition-colors"
+                onClick={handleEmailClick}
+              >
+                <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
+                <span>psicologiaonlineypresencial14@gmail.com</span>
+              </div>
+              <div 
+                className="flex items-center gap-2 cursor-pointer hover:text-emerald-400 transition-colors"
+                onClick={handleInstagramClick}
+              >
+                <Instagram className="h-4 w-4 text-emerald-400 flex-shrink-0" />
+                <span>@psicologia_online_presencial</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-emerald-400" />
+                <Clock className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <span>Lun-Vie: 9:00-20:00</span>
               </div>
             </div>

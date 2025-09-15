@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Heart, Menu, X, Calendar, Phone } from "lucide-react"
+import { Heart, Menu, X, Calendar, Phone, Instagram } from "lucide-react"
 import Image from "next/image"
 
 export function Navbar() {
@@ -42,6 +42,10 @@ export function Navbar() {
       element.scrollIntoView({ behavior: "smooth", block: "start" })
     }
     setIsMobileMenuOpen(false) // Cerrar menú móvil al navegar
+  }
+
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/psicologia_online_presencial", '_blank')
   }
 
   const navItems = [
@@ -110,6 +114,14 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="sm"
+              onClick={handleInstagramClick}
+              className="text-gray-600 hover:text-pink-600 hover:bg-pink-50 cursor-pointer animate-hover-scale"
+            >
+              <Instagram className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={() => scrollToSection("contacto")}
               className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer animate-hover-scale"
             >
@@ -161,6 +173,14 @@ export function Navbar() {
             </div>
             
             <div className="mt-4 pt-4 border-t border-gray-200 space-y-2">
+              <Button
+                variant="outline"
+                className="w-full border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white cursor-pointer"
+                onClick={handleInstagramClick}
+              >
+                <Instagram className="h-4 w-4 mr-2" />
+                Instagram
+              </Button>
               <Button
                 variant="outline"
                 className="w-full border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer"

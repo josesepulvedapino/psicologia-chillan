@@ -10,7 +10,7 @@ export function StructuredData() {
         "description": "Servicio profesional de psicología online en Chillán, Chile. Especialistas en terapia individual y familiar con certificación profesional.",
         "url": "https://psicologiachillan.cl",
         "telephone": "+56999406614",
-        "email": "contacto@psicologiachillan.cl",
+        "email": "psicologiaonlineypresencial14@gmail.com",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -101,7 +101,7 @@ export function StructuredData() {
         ],
         "sameAs": [
           "https://www.facebook.com/psicologiaonlinechillan",
-          "https://www.instagram.com/psicologiaonlinechillan"
+          "https://www.instagram.com/psicologia_online_presencial"
         ]
       },
       {
