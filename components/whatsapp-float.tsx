@@ -17,7 +17,7 @@ export function WhatsAppFloat() {
   return (
     <>
       {/* Botón flotante */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 animate-pulse-soft animate-float cursor-pointer"
@@ -29,7 +29,7 @@ export function WhatsAppFloat() {
 
       {/* Popup de WhatsApp */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 animate-scale-in">
+        <div className="fixed bottom-24 right-2 sm:right-6 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-72 sm:w-80 max-w-[calc(100vw-1rem)] animate-scale-in">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">

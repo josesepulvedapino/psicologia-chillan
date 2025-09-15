@@ -62,7 +62,7 @@ export function Footer() {
                 onClick={handleEmailClick}
               >
                 <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
-                <span>psicologiaonlineypresencial14@gmail.com</span>
+                <span className="break-all">psicologiaonlineypresencial14@gmail.com</span>
               </div>
               <div 
                 className="flex items-center gap-2 cursor-pointer hover:text-emerald-400 transition-colors"

@@ -213,7 +213,7 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-emerald-600" />
                   <div>
-                    <p className="font-medium">psicologiaonlineypresencial14@gmail.com</p>
+                    <p className="font-medium break-all">psicologiaonlineypresencial14@gmail.com</p>
                     <p className="text-sm text-gray-600">Respuesta en 24 horas</p>
                   </div>
                 </div>
