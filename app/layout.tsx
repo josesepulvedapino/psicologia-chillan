@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://psicologia-chillan.cl'),
+  metadataBase: new URL('https://psicologiachillan.cl'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Psicología Online Chillán | Terapia Psicológica Virtual en Chile',
     description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo. Consultas por WhatsApp y sesiones virtuales seguras.',
-    url: 'https://psicologia-chillan.cl',
+    url: 'https://psicologiachillan.cl',
     siteName: 'Psicología Online Chillán',
     images: [
       {
@@ -55,9 +55,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
   other: {
     'geo.region': 'CL-NB',

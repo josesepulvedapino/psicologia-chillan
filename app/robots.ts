@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://psicologia-chillan.cl/sitemap.xml',
-    host: 'https://psicologia-chillan.cl',
+    sitemap: 'https://psicologiachillan.cl/sitemap.xml',
+    host: 'https://psicologiachillan.cl',
   }
 }

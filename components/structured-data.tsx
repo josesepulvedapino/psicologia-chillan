@@ -4,11 +4,11 @@ export function StructuredData() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://psicologia-chillan.cl/#business",
+        "@id": "https://psicologiachillan.cl/#business",
         "name": "Psicología Online Chillán",
         "alternateName": "Psicólogos Online Chillán",
         "description": "Servicio profesional de psicología online en Chillán, Chile. Especialistas en terapia individual y familiar con certificación profesional.",
-        "url": "https://psicologia-chillan.cl",
+        "url": "https://psicologiachillan.cl",
         "telephone": "+56999406614",
         "email": "contacto@psicologiachillan.cl",
         "priceRange": "$$",
@@ -106,25 +106,25 @@ export function StructuredData() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://psicologia-chillan.cl/#website",
-        "url": "https://psicologia-chillan.cl",
+        "@id": "https://psicologiachillan.cl/#website",
+        "url": "https://psicologiachillan.cl",
         "name": "Psicología Online Chillán",
         "description": "Terapia psicológica online profesional en Chillán, Chile",
         "inLanguage": "es-CL",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://psicologia-chillan.cl/?s={search_term_string}",
+          "target": "https://psicologiachillan.cl/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://psicologia-chillan.cl/#organization",
+        "@id": "https://psicologiachillan.cl/#organization",
         "name": "Psicología Online Chillán",
-        "url": "https://psicologia-chillan.cl",
+        "url": "https://psicologiachillan.cl",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://psicologia-chillan.cl/logo-psicologia.png",
+          "url": "https://psicologiachillan.cl/logo-psicologia.png",
           "width": 512,
           "height": 512
         },
