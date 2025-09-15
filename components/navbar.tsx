@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Heart, Menu, X, Calendar, Phone } from "lucide-react"
+import Image from "next/image"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -57,15 +58,22 @@ export function Navbar() {
         isScrolled ? "shadow-lg" : "shadow-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <div 
-            className="flex items-center gap-2 cursor-pointer animate-hover-scale"
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer animate-hover-scale"
             onClick={() => scrollToSection("inicio")}
           >
-            <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-              <Heart className="h-6 w-6 text-white" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16">
+              <Image
+                src="/logo-psicologia.png"
+                alt="Psicología Online Chillán - Terapia psicológica profesional"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-gray-900">

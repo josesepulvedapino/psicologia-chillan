@@ -48,7 +48,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Terapia Individual Online",
-                "description": "Sesiones personalizadas para abordar ansiedad, depresión, estrés y otros desafíos emocionales"
+                "description": "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales"
               }
             },
             {
@@ -124,9 +124,9 @@ export function StructuredData() {
         "url": "https://psicologia-chillan.cl",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://psicologia-chillan.cl/placeholder-logo.png",
-          "width": 300,
-          "height": 300
+          "url": "https://psicologia-chillan.cl/logo-psicologia.png",
+          "width": 512,
+          "height": 512
         },
         "contactPoint": {
           "@type": "ContactPoint",
