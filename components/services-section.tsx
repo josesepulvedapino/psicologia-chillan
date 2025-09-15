@@ -12,13 +12,6 @@ export function ServicesSection() {
       image: "/individual-therapy-session.jpg",
     },
     {
-      icon: Heart,
-      title: "Terapia de Pareja",
-      description: "Fortalece tu relación con herramientas de comunicación y resolución de conflictos.",
-      features: ["Comunicación efectiva", "Resolución de conflictos", "Reconstrucción de confianza"],
-      image: "/couple-therapy-online.jpg",
-    },
-    {
       icon: Users2,
       title: "Terapia Familiar",
       description: "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar.",

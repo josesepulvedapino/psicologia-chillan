@@ -32,7 +32,6 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Terapia Individual</li>
-              <li>Terapia de Pareja</li>
               <li>Terapia Familiar</li>
               <li>Coaching Personal</li>
               <li>Manejo del Estrés</li>

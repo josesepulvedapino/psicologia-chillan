@@ -55,14 +55,6 @@ export function StructuredData() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Terapia de Pareja Online",
-                "description": "Fortalece tu relación con herramientas de comunicación y resolución de conflictos"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
                 "name": "Terapia Familiar Online",
                 "description": "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar"
               }
@@ -164,7 +156,7 @@ export function StructuredData() {
         "name": "¿Qué tipos de terapia psicológica ofrecen en Chillán?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ofrecemos terapia individual, terapia de pareja, terapia familiar, coaching personal, manejo del estrés y programas de bienestar emocional. Todos nuestros servicios están adaptados para modalidad online."
+          "text": "Ofrecemos terapia individual, terapia familiar, coaching personal, manejo del estrés y programas de bienestar emocional. Todos nuestros servicios están adaptados para modalidad online."
         }
       },
       {

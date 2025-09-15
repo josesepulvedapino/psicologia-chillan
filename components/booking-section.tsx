@@ -146,7 +146,6 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="individual">Terapia Individual</SelectItem>
-                      <SelectItem value="pareja">Terapia de Pareja</SelectItem>
                       <SelectItem value="familiar">Terapia Familiar</SelectItem>
                       <SelectItem value="coaching">Coaching Personal</SelectItem>
                       <SelectItem value="estres">Manejo del Estrés</SelectItem>
