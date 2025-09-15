@@ -19,9 +19,9 @@ export function TestimonialsSection() {
       avatar: "/patient-avatar-carlos.jpg",
     },
     {
-      name: "Ana y Roberto",
-      age: "Pareja",
-      text: "Salvamos nuestro matrimonio gracias a la terapia de pareja. Las sesiones online nos permitieron trabajar juntos desde un espacio cómodo y familiar.",
+      name: "Laura Fernández",
+      age: "35 años",
+      text: "Después de años luchando con traumas del pasado, encontré la ayuda que necesitaba. La terapia reparatoria me ayudó a sanar y reconstruir mi vida con confianza.",
       rating: 5,
       avatar: "/patient-avatar-couple.jpg",
     },
@@ -31,19 +31,19 @@ export function TestimonialsSection() {
     <section id="testimonios" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance animate-fade-in-up animate-stagger-1">
             Lo que dicen nuestros pacientes
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-2">
             Testimonios reales de personas que han transformado su bienestar con nuestra ayuda
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="relative bg-gray-50 border-0 hover:shadow-lg transition-shadow">
+            <Card key={index} className="relative bg-gray-50 border-0 hover:shadow-lg transition-shadow animate-fade-in-up animate-hover-lift" style={{animationDelay: `${index * 0.2}s`}}>
               <CardContent className="pt-8 pb-6">
-                <Quote className="h-8 w-8 text-emerald-600 mb-4" />
+                <Quote className="h-8 w-8 text-emerald-600 mb-4 animate-float" />
                 <p className="text-gray-700 mb-6 text-pretty leading-relaxed">"{testimonial.text}"</p>
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

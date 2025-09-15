@@ -53,7 +53,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-emerald-100 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-emerald-100 animate-fade-in-down ${
         isScrolled ? "shadow-lg" : "shadow-sm"
       }`}
     >
@@ -61,7 +61,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div 
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer animate-hover-scale"
             onClick={() => scrollToSection("inicio")}
           >
             <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
@@ -83,7 +83,7 @@ export function Navbar() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors relative py-2 cursor-pointer hover:scale-105 ${
+                className={`text-sm font-medium transition-colors relative py-2 cursor-pointer animate-hover-scale ${
                   activeSection === item.id
                     ? "text-emerald-600"
                     : "text-gray-600 hover:text-emerald-600"
@@ -103,7 +103,7 @@ export function Navbar() {
               variant="ghost"
               size="sm"
               onClick={() => scrollToSection("contacto")}
-              className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer"
+              className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer animate-hover-scale"
             >
               <Phone className="h-4 w-4 mr-2" />
               Llamar
@@ -111,7 +111,7 @@ export function Navbar() {
             <Button
               size="sm"
               onClick={() => scrollToSection("contacto")}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer animate-hover-glow"
             >
               <Calendar className="h-4 w-4 mr-2" />
               Agendar Cita

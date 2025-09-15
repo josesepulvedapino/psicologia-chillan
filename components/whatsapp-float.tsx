@@ -20,7 +20,7 @@ export function WhatsAppFloat() {
       <div className="fixed bottom-6 right-6 z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 animate-pulse cursor-pointer"
+            className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 animate-pulse-soft animate-float cursor-pointer"
             aria-label="Contactar por WhatsApp"
           >
           <MessageCircle className="h-6 w-6" />
@@ -29,7 +29,7 @@ export function WhatsAppFloat() {
 
       {/* Popup de WhatsApp */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 animate-in slide-in-from-bottom-2">
+        <div className="fixed bottom-24 right-6 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 animate-scale-in">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
@@ -61,7 +61,7 @@ export function WhatsAppFloat() {
 
           <button
             onClick={handleWhatsAppClick}
-            className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer animate-hover-glow"
           >
             <MessageCircle className="h-4 w-4" />
             Iniciar conversación

@@ -74,8 +74,8 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
     return (
       <section id="contacto" className="py-20 bg-emerald-50">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <CheckCircle className="h-16 w-16 text-emerald-600 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">¡WhatsApp Abierto!</h2>
+          <CheckCircle className="h-16 w-16 text-emerald-600 mx-auto mb-6 animate-bounce-in" />
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">¡WhatsApp Abierto!</h2>
           <p className="text-lg text-gray-600 mb-8">
             Se ha abierto WhatsApp con todos tus datos organizados. Solo envía el mensaje y nos pondremos en contacto contigo dentro de las próximas 24 horas para confirmar tu sesión.
           </p>
@@ -95,14 +95,14 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
     <section id="contacto" className="py-20 bg-emerald-50">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance">Agenda tu Primera Sesión</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance animate-fade-in-up animate-stagger-1">Agenda tu Primera Sesión</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-2">
             Completa el formulario y nos pondremos en contacto contigo para coordinar tu cita
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          <Card className="bg-white">
+          <Card className="bg-white animate-fade-in-left animate-stagger-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Calendar className="h-5 w-5 text-emerald-600" />
@@ -166,7 +166,7 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 cursor-pointer"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 cursor-pointer animate-hover-glow"
                 >
                   Enviar por WhatsApp
                 </Button>
@@ -174,8 +174,8 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
             </CardContent>
           </Card>
 
-          <div className="space-y-6">
-            <Card className="bg-white">
+          <div className="space-y-6 animate-fade-in-right animate-stagger-2">
+            <Card className="bg-white animate-hover-lift">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Clock className="h-5 w-5 text-emerald-600" />
@@ -198,7 +198,7 @@ ${message ? `💬 *MENSAJE ADICIONAL:*\n${message}\n` : ''}
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
+            <Card className="bg-white animate-hover-lift">
               <CardHeader>
                 <CardTitle>Contacto Directo</CardTitle>
               </CardHeader>

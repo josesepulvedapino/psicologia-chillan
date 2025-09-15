@@ -7,7 +7,7 @@ export function StructuredData() {
         "@id": "https://psicologia-chillan.cl/#business",
         "name": "Psicología Online Chillán",
         "alternateName": "Psicólogos Online Chillán",
-        "description": "Servicio profesional de psicología online en Chillán, Chile. Especialistas en terapia individual, de pareja y familiar con certificación profesional.",
+        "description": "Servicio profesional de psicología online en Chillán, Chile. Especialistas en terapia individual y familiar con certificación profesional.",
         "url": "https://psicologia-chillan.cl",
         "telephone": "+56999406614",
         "email": "contacto@psicologiachillan.cl",

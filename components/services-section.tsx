@@ -7,8 +7,8 @@ export function ServicesSection() {
     {
       icon: Brain,
       title: "Terapia Individual",
-      description: "Sesiones personalizadas para abordar ansiedad, depresión, estrés y otros desafíos emocionales.",
-      features: ["Evaluación inicial gratuita", "Plan de tratamiento personalizado", "Seguimiento continuo"],
+      description: "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales.",
+      features: ["Evaluación inicial completa", "Terapia reparatoria en trauma complejo", "Plan de tratamiento personalizado", "Seguimiento continuo"],
       image: "/individual-therapy-session.jpg",
     },
     {
@@ -45,17 +45,17 @@ export function ServicesSection() {
     <section id="servicios" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance animate-fade-in-up animate-stagger-1">
             Nuestros Servicios Especializados
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-2">
             Ofrecemos una amplia gama de servicios psicológicos adaptados a tus necesidades específicas
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="h-full hover:shadow-lg transition-shadow bg-white overflow-hidden">
+            <Card key={index} className="h-full hover:shadow-lg transition-shadow bg-white overflow-hidden animate-fade-in-up animate-hover-lift" style={{animationDelay: `${index * 0.1}s`}}>
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={service.image || "/placeholder.svg"}
@@ -65,7 +65,7 @@ export function ServicesSection() {
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center animate-hover-scale">
                   <service.icon className="h-6 w-6 text-emerald-600" />
                 </div>
               </div>
