@@ -19,11 +19,13 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative">
             <Image
-              src="/therapy-session-comfortable-space.jpg"
+              src="/therapy-session-comfortable-space-500.webp"
               alt="Espacio cómodo para terapia online desde casa"
               width={500}
               height={400}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
+              quality={85}
             />
             <div className="absolute -top-4 -right-4 bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium">
               Desde tu hogar

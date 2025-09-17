@@ -22,9 +22,9 @@ export default function Head() {
       {/* Preload critical resources */}
       <link 
         rel="preload" 
-        href="/psychologist-online-session.jpg" 
+        href="/psychologist-online-session-600.webp" 
         as="image" 
-        type="image/jpeg"
+        type="image/webp"
       />
       
       {/* Additional SEO meta tags */}

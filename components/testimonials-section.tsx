@@ -9,21 +9,21 @@ export function TestimonialsSection() {
       age: "32 años",
       text: "La terapia online me cambió la vida. Pude trabajar mi ansiedad desde casa, con horarios que se adaptaban a mi trabajo. La psicóloga fue muy empática y profesional.",
       rating: 5,
-      avatar: "/patient-avatar-maria.jpg",
+      avatar: "/patient-avatar-maria-48.webp",
     },
     {
       name: "Carlos Mendoza",
       age: "28 años",
       text: "Excelente servicio. Como hombre, me costaba mucho buscar ayuda psicológica, pero la modalidad online me dio la confianza que necesitaba para comenzar.",
       rating: 5,
-      avatar: "/patient-avatar-carlos.jpg",
+      avatar: "/patient-avatar-carlos-48.webp",
     },
     {
       name: "Laura Fernández",
       age: "35 años",
       text: "Después de años luchando con traumas del pasado, encontré la ayuda que necesitaba. La terapia reparatoria me ayudó a sanar y reconstruir mi vida con confianza.",
       rating: 5,
-      avatar: "/patient-avatar-couple.jpg",
+      avatar: "/patient-avatar-couple-48.webp",
     },
   ]
 
@@ -57,7 +57,9 @@ export function TestimonialsSection() {
                       alt={`Foto de ${testimonial.name}`}
                       width={48}
                       height={48}
+                      sizes="48px"
                       className="w-full h-full object-cover"
+                      quality={85}
                     />
                   </div>
                   <div>
@@ -74,25 +76,31 @@ export function TestimonialsSection() {
           <p className="text-sm text-gray-500 mb-8">Certificados y avalados por:</p>
           <div className="flex justify-center items-center gap-8 opacity-60">
             <Image
-              src="/colegio-psicologos-chile-logo.jpg"
+              src="/colegio-psicologos-chile-logo-120.webp"
               alt="Colegio de Psicólogos de Chile"
               width={120}
               height={60}
+              sizes="120px"
               className="h-12 w-auto object-contain"
+              quality={85}
             />
             <Image
-              src="/ministerio-salud-chile-logo.jpg"
+              src="/ministerio-salud-chile-logo-120.webp"
               alt="Ministerio de Salud Chile"
               width={120}
               height={60}
+              sizes="120px"
               className="h-12 w-auto object-contain"
+              quality={85}
             />
             <Image
-              src="/telemedicina-certificacion-logo.jpg"
+              src="/telemedicina-certificacion-logo-120.webp"
               alt="Certificación Telemedicina"
               width={120}
               height={60}
+              sizes="120px"
               className="h-12 w-auto object-contain"
+              quality={85}
             />
           </div>
         </div>

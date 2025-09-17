@@ -9,35 +9,35 @@ export function ServicesSection() {
       title: "Terapia Individual",
       description: "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales.",
       features: ["Evaluación inicial completa", "Terapia reparatoria en trauma complejo", "Plan de tratamiento personalizado", "Seguimiento continuo"],
-      image: "/individual-therapy-session.jpg",
+      image: "/individual-therapy-session-400.webp",
     },
     {
       icon: Users2,
       title: "Terapia Familiar",
       description: "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar.",
       features: ["Dinámicas familiares", "Comunicación intergeneracional", "Resolución de crisis"],
-      image: "/family-therapy-session.jpg",
+      image: "/family-therapy-session-400.webp",
     },
     {
       icon: Lightbulb,
       title: "Coaching Personal",
       description: "Desarrolla tu potencial y alcanza tus metas personales y profesionales.",
       features: ["Definición de objetivos", "Desarrollo de habilidades", "Plan de acción"],
-      image: "/personal-coaching-session.jpg",
+      image: "/personal-coaching-session-400.webp",
     },
     {
       icon: Shield,
       title: "Manejo del Estrés",
       description: "Técnicas especializadas para manejar el estrés laboral y personal de manera efectiva.",
       features: ["Técnicas de relajación", "Mindfulness", "Gestión del tiempo"],
-      image: "/stress-management-therapy.jpg",
+      image: "/stress-management-therapy-400.webp",
     },
     {
       icon: Smile,
       title: "Bienestar Emocional",
       description: "Programas integrales para mejorar tu autoestima y bienestar general.",
       features: ["Autoconocimiento", "Inteligencia emocional", "Hábitos saludables"],
-      image: "/emotional-wellness-session.jpg",
+      image: "/emotional-wellness-session-400.webp",
     },
   ]
 
@@ -62,7 +62,9 @@ export function ServicesSection() {
                   alt={`${service.title} - Psicología online Chillán`}
                   width={400}
                   height={200}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center animate-hover-scale">

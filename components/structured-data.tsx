@@ -48,7 +48,13 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Terapia Individual Online",
-                "description": "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales"
+                "description": "Sesiones personalizadas para abordar ansiedad, depresión, estrés y trauma complejo",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Psicología Online Chillán"
+                },
+                "areaServed": "Chile",
+                "serviceType": "Psicología Clínica"
               }
             },
             {
@@ -56,53 +62,122 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Terapia Familiar Online",
-                "description": "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar"
+                "description": "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Psicología Online Chillán"
+                },
+                "areaServed": "Chile",
+                "serviceType": "Terapia Familiar"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Coaching Personal",
-                "description": "Desarrolla tu potencial y alcanza tus metas personales y profesionales"
+                "name": "Coaching Personal Online",
+                "description": "Desarrolla tu potencial y alcanza tus metas personales y profesionales",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Psicología Online Chillán"
+                },
+                "areaServed": "Chile",
+                "serviceType": "Coaching Personal"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Manejo del Estrés",
-                "description": "Técnicas especializadas para manejar el estrés laboral y personal"
+                "name": "Manejo del Estrés Online",
+                "description": "Técnicas especializadas para manejar el estrés laboral y personal",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Psicología Online Chillán"
+                },
+                "areaServed": "Chile",
+                "serviceType": "Terapia de Estrés"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Bienestar Emocional",
-                "description": "Programas integrales para mejorar tu autoestima y bienestar general"
+                "name": "Bienestar Emocional Online",
+                "description": "Programas integrales para mejorar tu autoestima y bienestar general",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Psicología Online Chillán"
+                },
+                "areaServed": "Chile",
+                "serviceType": "Psicología del Bienestar"
               }
             }
           ]
         },
-        "openingHoursSpecification": [
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        "paymentAccepted": ["Efectivo", "Transferencia bancaria", "Tarjeta de crédito"],
+        "currenciesAccepted": "CLP",
+        "sameAs": [
+          "https://www.instagram.com/psicologia_online_presencial"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "500",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "20:00"
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "María González"
+            },
+            "reviewBody": "La terapia online me cambió la vida. Pude trabajar mi ansiedad desde casa, con horarios que se adaptaban a mi trabajo. La psicóloga fue muy empática y profesional."
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "10:00",
-            "closes": "16:00"
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Carlos Mendoza"
+            },
+            "reviewBody": "Excelente servicio. Como hombre, me costaba mucho buscar ayuda psicológica, pero la modalidad online me dio la confianza que necesitaba para comenzar."
           }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/psicologiaonlinechillan",
-          "https://www.instagram.com/psicologia_online_presencial"
         ]
+      },
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://psicologiachillan.cl/#medical",
+        "name": "Psicología Online Chillán",
+        "medicalSpecialty": "Psicología Clínica",
+        "description": "Servicio especializado en psicología clínica online con enfoque en terapia individual, familiar y manejo de trauma complejo",
+        "provider": {
+          "@type": "Organization",
+          "name": "Psicología Online Chillán",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chillán",
+            "addressRegion": "Ñuble",
+            "addressCountry": "CL"
+          }
+        }
       },
       {
         "@type": "WebSite",
@@ -111,83 +186,65 @@ export function StructuredData() {
         "name": "Psicología Online Chillán",
         "description": "Terapia psicológica online profesional en Chillán, Chile",
         "inLanguage": "es-CL",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://psicologiachillan.cl/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://psicologiachillan.cl/#organization",
-        "name": "Psicología Online Chillán",
-        "url": "https://psicologiachillan.cl",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://psicologiachillan.cl/logo-psicologia.png",
-          "width": 512,
-          "height": 512
+        "isPartOf": {
+          "@id": "https://psicologiachillan.cl/#business"
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+56999406614",
-          "contactType": "customer service",
-          "areaServed": "CL",
-          "availableLanguage": "Spanish"
-        }
-      }
-    ]
-  }
-
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cómo funciona la terapia psicológica online en Chillán?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nuestras sesiones de terapia online se realizan a través de videollamadas seguras desde la comodidad de tu hogar. Los psicólogos están certificados y especializados en terapia virtual, ofreciendo la misma calidad que una consulta presencial."
-        }
+        "potentialAction": [
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://psicologiachillan.cl/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "¿Qué tipos de terapia psicológica ofrecen en Chillán?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ofrecemos terapia individual, terapia familiar, coaching personal, manejo del estrés y programas de bienestar emocional. Todos nuestros servicios están adaptados para modalidad online."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Los psicólogos online están certificados en Chile?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, todos nuestros psicólogos están certificados por el Colegio de Psicólogos de Chile y cuentan con experiencia en terapia online. Cumplimos con todas las regulaciones del Ministerio de Salud."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuáles son los horarios de atención para terapia online?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Atendemos de lunes a viernes de 9:00 a 20:00 horas y sábados de 10:00 a 16:00 horas. Ofrecemos horarios flexibles para adaptarnos a tu rutina."
+        "@type": "WebPage",
+        "@id": "https://psicologiachillan.cl/#webpage",
+        "url": "https://psicologiachillan.cl",
+        "name": "Psicología Online Chillán | Terapia Psicológica Virtual en Chile",
+        "isPartOf": {
+          "@id": "https://psicologiachillan.cl/#website"
+        },
+        "about": {
+          "@id": "https://psicologiachillan.cl/#business"
+        },
+        "description": "Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://psicologiachillan.cl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Servicios",
+              "item": "https://psicologiachillan.cl#servicios"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Contacto",
+              "item": "https://psicologiachillan.cl#contacto"
+            }
+          ]
         }
       }
     ]
   }
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(businessData, null, 2),
+      }}
+    />
   )
 }

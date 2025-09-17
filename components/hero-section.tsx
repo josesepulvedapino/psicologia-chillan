@@ -76,12 +76,14 @@ export function HeroSection() {
           <div className="relative animate-fade-in-right animate-stagger-2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl animate-hover-lift">
               <Image
-                src="/psychologist-online-session.jpg"
+                src="/psychologist-online-session-600.webp"
                 alt="Psicóloga profesional en sesión online desde Chillán"
                 width={600}
                 height={500}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="w-full h-auto object-cover"
                 priority
+                quality={85}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent" />
             </div>

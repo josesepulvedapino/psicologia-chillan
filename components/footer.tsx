@@ -17,10 +17,17 @@ export function Footer() {
   const handleInstagramClick = () => {
     window.open("https://www.instagram.com/psicologia_online_presencial", '_blank')
   }
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Heart className="h-6 w-6 text-emerald-400" />
@@ -39,11 +46,84 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Terapia Individual</li>
-              <li>Terapia Familiar</li>
-              <li>Coaching Personal</li>
-              <li>Manejo del Estrés</li>
-              <li>Bienestar Emocional</li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("servicios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Terapia Individual
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("servicios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Terapia Familiar
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("servicios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Coaching Personal
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("servicios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Manejo del Estrés
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("servicios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Bienestar Emocional
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Navegación</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>
+                <button 
+                  onClick={() => scrollToSection("inicio")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Inicio
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("nosotros")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Nosotros
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("testimonios")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Testimonios
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("contacto")}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer text-left"
+                >
+                  Contacto
+                </button>
+              </li>
             </ul>
           </div>
 

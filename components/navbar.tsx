@@ -64,38 +64,39 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
-          {/* Logo */}
+          {/* Logo - Separado para evitar layout shift */}
           <div 
-            className="flex items-center gap-2 sm:gap-3 cursor-pointer animate-hover-scale"
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer animate-hover-scale flex-shrink-0"
             onClick={() => scrollToSection("inicio")}
           >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16">
-              <Image
-                src="/logo-psicologia.png"
+            <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex-shrink-0">
+              <img
+                src="/logo.svg"
                 alt="Psicología Online Chillán - Terapia psicológica profesional"
                 width={64}
                 height={64}
-                className="w-full h-full object-cover"
-                priority
+                className="w-full h-full object-contain p-1"
+                loading="eager"
+                style={{ minWidth: '40px', minHeight: '40px' }}
               />
             </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold text-gray-900">
+            <div className="flex-shrink-0">
+              <span className="text-sm sm:text-lg font-bold text-gray-900 whitespace-nowrap">
                 Psicología Online
               </span>
-              <div className="text-sm text-emerald-600">
+              <div className="text-xs sm:text-sm text-emerald-600 whitespace-nowrap">
                 Chillán
               </div>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Separado para evitar layout shift */}
+          <div className="hidden lg:flex items-center space-x-8 flex-shrink-0">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors relative py-2 cursor-pointer animate-hover-scale ${
+                className={`text-sm font-medium transition-colors relative py-2 cursor-pointer animate-hover-scale whitespace-nowrap ${
                   activeSection === item.id
                     ? "text-emerald-600"
                     : "text-gray-600 hover:text-emerald-600"
@@ -109,13 +110,13 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA Buttons - Separado para evitar layout shift */}
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <Button
               variant="ghost"
               size="sm"
               onClick={handleInstagramClick}
-              className="text-gray-600 hover:text-pink-600 hover:bg-pink-50 cursor-pointer animate-hover-scale"
+              className="text-gray-600 hover:text-pink-600 hover:bg-pink-50 cursor-pointer animate-hover-scale flex-shrink-0"
             >
               <Instagram className="h-4 w-4" />
             </Button>
@@ -123,7 +124,7 @@ export function Navbar() {
               variant="ghost"
               size="sm"
               onClick={() => scrollToSection("contacto")}
-              className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer animate-hover-scale"
+              className="text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer animate-hover-scale whitespace-nowrap"
             >
               <Phone className="h-4 w-4 mr-2" />
               Llamar
@@ -131,7 +132,7 @@ export function Navbar() {
             <Button
               size="sm"
               onClick={() => scrollToSection("contacto")}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer animate-hover-glow"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer animate-hover-glow whitespace-nowrap"
             >
               <Calendar className="h-4 w-4 mr-2" />
               Agendar Cita

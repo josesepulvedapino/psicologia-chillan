@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-title': 'Psicología Chillán',
     'application-name': 'Psicología Online Chillán',
     'msapplication-TileColor': '#059669',
-    'msapplication-TileImage': '/logo-psicologia.png',
+    'msapplication-TileImage': '/logo.svg',
   },
 }
 
