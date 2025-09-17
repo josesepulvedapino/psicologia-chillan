@@ -160,8 +160,19 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">© 2025 Psicología Online Chillán. Todos los derechos reservados.</p>
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <span>Desarrollado por</span>
+              <a 
+                href="https://astraconsulting.cl" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium cursor-pointer"
+              >
+                Astra Consulting
+              </a>
+            </div>
           </div>
         </div>
       </div>
