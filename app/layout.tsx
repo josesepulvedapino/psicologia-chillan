@@ -9,7 +9,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Psicología Chillán Online | Psicólogo Virtual Chillán',
-  description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo. Horarios flexibles, consultas por WhatsApp y sesiones virtuales seguras.',
+  description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo.',
   keywords: 'psicología chillán online, psicología online chillán, psicólogo virtual chillán, terapia online chillán, psicología online ñuble, psicólogo chillán online, terapia virtual chillán, consulta psicológica online chillán, psicólogo online ñuble, terapia online ñuble, psicólogos chillán, terapia individual chillán, salud mental chillán, WhatsApp psicólogo chillán, psicólogo certificado chillán, telemedicina psicológica chillán',
   authors: [{ name: 'Psicología Online Chillán' }],
   creator: 'Psicología Online Chillán',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Psicología Chillán Online | Psicólogo Virtual Chillán',
-    description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo. Consultas por WhatsApp y sesiones virtuales seguras.',
+    description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual, familiar y trauma complejo.',
     url: 'https://psicologiachillan.cl',
     siteName: 'Psicología Online Chillán',
     images: [

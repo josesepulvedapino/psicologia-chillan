@@ -1,10 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { MessageCircle, X } from "lucide-react"
 
 export function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isStudioPage, setIsStudioPage] = useState(false)
+
+  useEffect(() => {
+    const checkStudioPage = () => {
+      setIsStudioPage(window.location.pathname === "/studio")
+    }
+    
+    checkStudioPage()
+    
+    // Escuchar cambios de ruta
+    const handleRouteChange = () => {
+      checkStudioPage()
+    }
+    
+    window.addEventListener("popstate", handleRouteChange)
+    
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange)
+    }
+  }, [])
   const phoneNumber = "+56999406614"
   const message = "Hola! Me interesa saber más sobre los servicios de psicología online. ¿Podrían brindarme más información?"
 
@@ -12,6 +32,11 @@ export function WhatsAppFloat() {
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`
     window.open(whatsappUrl, '_blank')
+  }
+
+  // No renderizar WhatsApp float si estamos en el Studio
+  if (isStudioPage) {
+    return null
   }
 
   return (

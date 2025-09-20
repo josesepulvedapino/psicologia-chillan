@@ -314,3 +314,22 @@
     background-position: 0% 50%;
   }
 }
+
+/* Studio layout styles - Solo cuando está presente */
+.studio-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Hide navbar and WhatsApp when in studio - Solo cuando body tiene la clase */
+body.studio-active nav,
+body.studio-active .whatsapp-float {
+  display: none !important;
+}

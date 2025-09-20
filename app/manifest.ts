@@ -12,27 +12,15 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ['health', 'medical', 'lifestyle'],
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-      {
         src: '/apple-touch-icon.png',
         sizes: '180x180',
         type: 'image/png',
       },
       {
-        src: '/logo-psicologia-128.webp',
-        sizes: '192x192',
-        type: 'image/webp',
-        purpose: 'any',
-      },
-      {
-        src: '/logo-psicologia-128.webp',
-        sizes: '512x512',
-        type: 'image/webp',
-        purpose: 'maskable',
-      },
+        src: '/favicon.ico',
+        sizes: '16x16 32x32 48x48',
+        type: 'image/x-icon',
+      }
     ],
   }
 }
