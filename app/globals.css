@@ -333,3 +333,48 @@ body.studio-active nav,
 body.studio-active .whatsapp-float {
   display: none !important;
 }
+
+/* Blog-specific styles */
+@layer utilities {
+  /* Smooth scrolling for better mobile experience */
+  .blog-container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Better touch targets for mobile */
+  .blog-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mejoras para el contenido del blog */
+  .blog-content {
+    line-height: 1.8;
+  }
+  
+  .blog-content h1,
+  .blog-content h2,
+  .blog-content h3,
+  .blog-content h4 {
+    scroll-margin-top: 2rem;
+  }
+  
+  /* Efectos hover para elementos interactivos */
+  .blog-content a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(16 185 129);
+    text-underline-offset: 4px;
+  }
+  
+  /* Mejoras para listas */
+  .blog-content ul,
+  .blog-content ol {
+    counter-reset: list-counter;
+  }
+  
+  /* Animaciones suaves para elementos del blog */
+  .blog-content * {
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -29,9 +29,16 @@ export const blockContentType = defineType({
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
+        {title: 'H5', value: 'h5'},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Highlighted', value: 'highlight'},
+        {title: 'Callout', value: 'callout'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        {title: 'Bullet', value: 'bullet'},
+        {title: 'Numbered', value: 'number'},
+        {title: 'Checklist', value: 'checklist'},
+      ],
       // Marks let you mark up inline text in the Portable Text Editor
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -39,6 +46,10 @@ export const blockContentType = defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+          {title: 'Underline', value: 'underline'},
+          {title: 'Strike', value: 'strike'},
+          {title: 'Code', value: 'code'},
+          {title: 'Highlight', value: 'highlight'},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -69,8 +80,94 @@ export const blockContentType = defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
+        },
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
         }
       ]
+    }),
+    // Separador visual
+    defineArrayMember({
+      type: 'object',
+      name: 'divider',
+      title: 'Separador',
+      fields: [
+        {
+          name: 'style',
+          type: 'string',
+          title: 'Estilo',
+          options: {
+            list: [
+              {title: 'Línea simple', value: 'line'},
+              {title: 'Línea con texto', value: 'line-with-text'},
+              {title: 'Espaciado', value: 'spacing'},
+            ]
+          }
+        },
+        {
+          name: 'text',
+          type: 'string',
+          title: 'Texto (opcional)',
+          hidden: ({parent}) => parent?.style !== 'line-with-text'
+        }
+      ],
+      preview: {
+        select: {
+          style: 'style',
+          text: 'text'
+        },
+        prepare({style, text}) {
+          return {
+            title: `Separador: ${style}`,
+            subtitle: text ? `"${text}"` : ''
+          }
+        }
+      }
+    }),
+    // Caja de información destacada
+    defineArrayMember({
+      type: 'object',
+      name: 'infoBox',
+      title: 'Caja de Información',
+      fields: [
+        {
+          name: 'type',
+          type: 'string',
+          title: 'Tipo',
+          options: {
+            list: [
+              {title: 'Información', value: 'info'},
+              {title: 'Advertencia', value: 'warning'},
+              {title: 'Consejo', value: 'tip'},
+              {title: 'Importante', value: 'important'},
+            ]
+          }
+        },
+        {
+          name: 'title',
+          type: 'string',
+          title: 'Título (opcional)'
+        },
+        {
+          name: 'content',
+          type: 'array',
+          title: 'Contenido',
+          of: [{type: 'block'}]
+        }
+      ],
+      preview: {
+        select: {
+          type: 'type',
+          title: 'title'
+        },
+        prepare({type, title}) {
+          return {
+            title: `Caja ${type}: ${title || 'Sin título'}`
+          }
+        }
+      }
     }),
   ],
 })

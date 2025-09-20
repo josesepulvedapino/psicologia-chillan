@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { Calendar, Clock, User, ArrowLeft, Heart, BookOpen } from 'lucide-react'
 import { ShareButton } from '@/components/share-button'
 import { BlogStructuredData } from '@/components/blog-structured-data'
+import { blogContentComponents } from '@/components/blog-content'
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogPostSlugs()
@@ -96,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-start justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-24 md:pt-32 lg:pt-28 animate-gradient">
         <div className="absolute inset-0 bg-[url('/serene-nature-landscape-with-soft-mountains-and-ca.jpg')] bg-cover bg-center opacity-10" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
           {/* Back Button */}
           <div className="mb-6 md:mb-8">
             <Link 
@@ -182,34 +183,49 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         </div>
       </section>
 
-      {/* Article Content Section - Consistente con about-section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <article className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            {/* Article Body */}
-            <div className="prose prose-lg prose-emerald max-w-none text-gray-800 leading-relaxed">
-              <PortableText value={post.body} />
+      {/* Article Content Section - Diseño mejorado con fondo cálido */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/20 relative">
+        {/* Elementos decorativos de fondo */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-100/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-100/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-50/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <article className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 p-8 md:p-12 lg:p-16">
+            {/* Article Body con diseño personalizado */}
+            <div className="max-w-none blog-content lg:max-w-5xl lg:mx-auto">
+              <PortableText 
+                value={post.body} 
+                components={blogContentComponents}
+              />
             </div>
 
-            {/* Article Footer */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
+            {/* Article Footer mejorado */}
+            <div className="mt-16 pt-8 border-t border-emerald-200">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                {/* Author Info */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                    <User className="h-6 w-6 text-emerald-600" />
+                {/* Author Info mejorado */}
+                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/50 rounded-2xl border border-emerald-100/50">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center shadow-lg">
+                    <User className="h-7 w-7 text-emerald-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">{post.author?.name || 'Autor'}</p>
-                    <p className="text-sm text-gray-500">Psicólogo especializado</p>
+                    <p className="font-bold text-gray-900 text-lg">{post.author?.name || 'Autor'}</p>
+                    <p className="text-sm text-emerald-600 font-medium">Psicólogo especializado</p>
+                    <p className="text-xs text-gray-500 mt-1">Artículo publicado el {new Date(post.publishedAt).toLocaleDateString('es-CL', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}</p>
                   </div>
                 </div>
 
-                {/* Share Button */}
+                {/* Share Button mejorado */}
                 <div className="flex items-center gap-4">
                   <ShareButton 
                     title={post.title}
-                    className="flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full hover:bg-emerald-100 transition-colors cursor-pointer"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
                   />
                 </div>
               </div>
@@ -218,33 +234,39 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         </div>
       </section>
 
-      {/* Call to Action Section - Consistente con booking-section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
-                <Heart className="h-8 w-8 text-emerald-600" />
+      {/* Call to Action Section mejorada */}
+      <section className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50/50 to-slate-50 relative overflow-hidden">
+        {/* Elementos decorativos */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-emerald-200/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-teal-200/20 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 p-8 md:p-12 text-center">
+            <div className="flex justify-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center shadow-lg animate-pulse-soft">
+                <Heart className="h-10 w-10 text-emerald-600" />
               </div>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-balance">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-balance">
               ¿Te gustó este artículo?
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto text-pretty leading-relaxed">
+            <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed">
               Si necesitas apoyo profesional o tienes preguntas sobre tu bienestar mental, 
-              nuestros psicólogos están aquí para ayudarte.
+              nuestros psicólogos están aquí para ayudarte con terapia online especializada.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/#contacto"
-                className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 animate-hover-glow"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 cursor-pointer animate-hover-lift"
               >
                 <Heart className="h-5 w-5" />
                 Agendar Consulta
               </Link>
               <Link 
                 href="/blog"
-                className="inline-flex items-center justify-center gap-2 border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 cursor-pointer animate-hover-lift"
               >
                 Ver Más Artículos
               </Link>

@@ -39,10 +39,10 @@ export async function BlogSection() {
             {posts.slice(0, 3).map((post, index) => (
               <article 
                 key={post._id} 
-                className="h-full hover:shadow-lg transition-shadow bg-white overflow-hidden animate-fade-in-up animate-hover-lift" 
+                className="h-full bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50 overflow-hidden animate-fade-in-up animate-hover-lift hover:shadow-2xl transition-all duration-300" 
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                {/* Image */}
+                {/* Image mejorada */}
                 {post.mainImage && (
                   <Link href={`/blog/${post.slug.current}`} className="block">
                     <div className="relative h-48 overflow-hidden">
@@ -52,51 +52,56 @@ export async function BlogSection() {
                         width={400}
                         height={200}
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        className="w-full h-full object-cover transition-transform hover:scale-110 duration-500"
                         quality={85}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                      <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center animate-hover-scale">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4 w-12 h-12 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg animate-hover-scale">
                         <BookOpen className="h-6 w-6 text-emerald-600" />
+                      </div>
+                      {/* Overlay con efecto hover */}
+                      <div className="absolute inset-0 bg-emerald-500/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 transform scale-0 hover:scale-100 transition-transform duration-300">
+                          <ArrowRight className="h-6 w-6 text-emerald-600" />
+                        </div>
                       </div>
                     </div>
                   </Link>
                 )}
                 
-                {/* Content */}
+                {/* Content mejorado */}
                 <div className="p-6">
-                  {/* Meta info */}
+                  {/* Meta info mejorada */}
                   <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      <span>{new Date(post.publishedAt).toLocaleDateString('es-CL', { 
+                    <div className="flex items-center gap-1 bg-emerald-50 px-2 py-1 rounded-full">
+                      <Calendar className="h-3 w-3 text-emerald-600" />
+                      <span className="text-emerald-700 font-medium">{new Date(post.publishedAt).toLocaleDateString('es-CL', { 
                         year: 'numeric', 
                         month: 'short', 
                         day: 'numeric' 
                       })}</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-3 w-3" />
-                      <span>{post.readingTime} min</span>
+                    <div className="flex items-center gap-1 bg-teal-50 px-2 py-1 rounded-full">
+                      <Clock className="h-3 w-3 text-teal-600" />
+                      <span className="text-teal-700 font-medium">{post.readingTime} min</span>
                     </div>
                   </div>
 
-                  {/* Title */}
+                  {/* Title mejorado */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                     <Link 
                       href={`/blog/${post.slug.current}`} 
-                      className="hover:text-emerald-600 transition-colors duration-200"
+                      className="hover:text-emerald-600 transition-colors duration-200 group"
                     >
                       {post.title}
                     </Link>
                   </h3>
 
-
-                  {/* Read more button */}
-                  <div className="mt-4">
+                  {/* Read more button mejorado */}
+                  <div className="mt-6">
                     <Link 
                       href={`/blog/${post.slug.current}`}
-                      className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm group"
+                      className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium text-sm group transition-colors duration-200 cursor-pointer animate-hover-lift"
                     >
                       Leer artículo
                       <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform duration-200" />
@@ -108,12 +113,12 @@ export async function BlogSection() {
           </div>
         )}
 
-        {/* Ver más artículos */}
+        {/* Ver más artículos mejorado */}
         {posts.length > 3 && (
           <div className="text-center mt-12">
             <Link 
               href="/blog"
-              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 animate-hover-glow"
+              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 cursor-pointer animate-hover-lift"
             >
               <BookOpen className="h-5 w-5" />
               Ver Todos los Artículos
