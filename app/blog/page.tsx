@@ -60,33 +60,34 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = parseInt(searchParams.page || '1', 10)
   const { posts, totalPosts, totalPages, hasNextPage, hasPrevPage } = await getBlogPostsPaginated(currentPage, 9)
+  
 
   if (posts.length === 0) {
     return (
       <div className="min-h-screen">
         {/* Hero Section - Consistente con la página principal */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-28 lg:pt-20 animate-gradient">
+        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-start justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-24 md:pt-32 lg:pt-28 animate-gradient">
           <div className="absolute inset-0 bg-[url('/serene-nature-landscape-with-soft-mountains-and-ca.jpg')] bg-cover bg-center opacity-10" />
           
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
             <div className="text-center">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-4 md:mb-6">
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-200 animate-fade-in-down animate-stagger-1">
                   <BookOpen className="h-5 w-5 text-emerald-600" />
                   <span className="text-sm font-medium text-emerald-700">Blog de Psicología</span>
                 </div>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance animate-fade-in-up animate-stagger-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 text-balance animate-fade-in-up animate-stagger-2">
                 Blog de Psicología Online Chillán - <span className="text-emerald-600">Próximamente</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">
                 Estamos preparando contenido interesante y útil para tu bienestar mental. 
                 Artículos, consejos y recursos especializados.
               </p>
               
-              <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto animate-fade-in-up animate-stagger-4">
+              <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto animate-fade-in-up animate-stagger-4">
                 <div className="flex justify-center mb-4">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
                     <Heart className="h-6 w-6 text-emerald-600" />
@@ -107,23 +108,23 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Consistente con la página principal */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-28 lg:pt-20 animate-gradient">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-start justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-24 md:pt-32 lg:pt-28 animate-gradient">
         <div className="absolute inset-0 bg-[url('/serene-nature-landscape-with-soft-mountains-and-ca.jpg')] bg-cover bg-center opacity-10" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-4 md:mb-6">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-200 animate-fade-in-down animate-stagger-1">
                 <BookOpen className="h-5 w-5 text-emerald-600" />
                 <span className="text-sm font-medium text-emerald-700">Blog de Psicología</span>
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance animate-fade-in-up animate-stagger-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 text-balance animate-fade-in-up animate-stagger-2">
               Blog de Psicología Online Chillán - <span className="text-emerald-600">Tu bienestar mental</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">
               Artículos, consejos y recursos especializados para tu crecimiento personal y bienestar mental.
             </p>
             

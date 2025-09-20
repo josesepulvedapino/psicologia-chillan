@@ -93,12 +93,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <BlogStructuredData post={post} />
       <div className="min-h-screen">
       {/* Hero Section - Consistente con la página principal */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-28 lg:pt-20 animate-gradient">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-start justify-center bg-gradient-to-br from-emerald-50 to-teal-50 pt-24 md:pt-32 lg:pt-28 animate-gradient">
         <div className="absolute inset-0 bg-[url('/serene-nature-landscape-with-soft-mountains-and-ca.jpg')] bg-cover bg-center opacity-10" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
           {/* Back Button */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <Link 
               href="/blog"
               className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium group animate-fade-in-down"
@@ -109,19 +109,19 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
 
           <div className="text-center">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-4 md:mb-6">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-200 animate-fade-in-down animate-stagger-1">
                 <BookOpen className="h-5 w-5 text-emerald-600" />
                 <span className="text-sm font-medium text-emerald-700">Artículo de Psicología</span>
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance animate-fade-in-up animate-stagger-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 text-balance animate-fade-in-up animate-stagger-2">
               {post.title}
             </h1>
             
             {/* Meta Information */}
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 mb-8 animate-fade-in-up animate-stagger-3">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm text-gray-600 mb-6 md:mb-8 animate-fade-in-up animate-stagger-3">
               {post.author?.name && (
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4 text-emerald-600" />

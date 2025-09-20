@@ -11,10 +11,16 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       title,
       slug,
       body,
-      author,
+      author->{
+        _id,
+        name
+      },
       mainImage,
       publishedAt,
-      categories
+      categories[]->{
+        _id,
+        title
+      }
     }`
     
     const posts = await client.fetch<BlogPost[]>(query)
@@ -111,9 +117,11 @@ export async function getBlogPostsPaginated(page: number = 1, limit: number = 9)
   try {
     const offset = (page - 1) * limit
     
-    // Obtener total de posts
-    const totalQuery = `count(*[_type == "post"])`
-    const totalPosts = await client.fetch<number>(totalQuery)
+    // Obtener total de posts - usando una consulta más robusta
+    const allPostsQuery = `*[_type == "post"]`
+    const allPosts = await client.fetch(allPostsQuery)
+    const totalPosts = allPosts.length
+    
     
     // Obtener posts paginados
     const postsQuery = `*[_type == "post"] | order(publishedAt desc) [${offset}...${offset + limit}] {
@@ -123,13 +131,20 @@ export async function getBlogPostsPaginated(page: number = 1, limit: number = 9)
       title,
       slug,
       body,
-      author,
+      author->{
+        _id,
+        name
+      },
       mainImage,
       publishedAt,
-      categories
+      categories[]->{
+        _id,
+        title
+      }
     }`
     
     const posts = await client.fetch<BlogPost[]>(postsQuery)
+    
     
     const totalPages = Math.ceil(totalPosts / limit)
     
