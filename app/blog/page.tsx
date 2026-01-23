@@ -15,32 +15,32 @@ interface BlogPageProps {
 export async function generateMetadata({ searchParams }: BlogPageProps): Promise<Metadata> {
   const currentPage = parseInt(searchParams.page || '1', 10)
   const { totalPosts, totalPages } = await getBlogPostsPaginated(currentPage, 9)
-  
+
   const isFirstPage = currentPage === 1
-  const pageTitle = isFirstPage 
-    ? 'Blog de Psicología Online Chillán | Artículos de Bienestar Mental'
-    : `Blog de Psicología Online Chillán | Página ${currentPage} de ${totalPages}`
-  
+  const pageTitle = isFirstPage
+    ? 'Blog de Psicología Online Chile | Artículos de Salud Mental y Bienestar'
+    : `Blog de Psicología Chile | Página ${currentPage} de ${totalPages} - Artículos de Bienestar`
+
   const pageDescription = isFirstPage
-    ? 'Descubre artículos especializados en psicología y bienestar mental en Chillán, Chile. Consejos, recursos y guías profesionales para tu crecimiento personal y salud mental.'
-    : `Artículos de psicología y bienestar mental en Chillán. Página ${currentPage} de ${totalPages}. Consejos profesionales para tu crecimiento personal.`
+    ? 'Artículos de psicología y salud mental en Chile. Consejos profesionales sobre ansiedad, depresión, estrés, relaciones y crecimiento personal. Recursos gratuitos de psicólogos certificados.'
+    : `Artículos de psicología y bienestar mental en Chile. Página ${currentPage} de ${totalPages}. Guías y consejos de psicólogos certificados para tu salud mental.`
 
   return {
     title: pageTitle,
     description: pageDescription,
-    keywords: 'blog psicología chillán, artículos bienestar mental, consejos psicológicos chillán, psicología online chile, salud mental ñuble, terapia psicológica chillán, crecimiento personal, bienestar emocional',
+    keywords: 'blog psicología chile, artículos salud mental chile, consejos psicológicos, psicología online chile, bienestar mental, terapia psicológica chile, ansiedad artículos, depresión consejos, estrés laboral chile, crecimiento personal, autoayuda psicología, recursos salud mental',
     openGraph: {
       title: pageTitle,
       description: pageDescription,
       url: `https://psicologiachillan.cl/blog${isFirstPage ? '' : `?page=${currentPage}`}`,
-      siteName: 'Psicología Online Chillán',
+      siteName: 'Psicología Online Chile',
       type: 'website',
       images: [
         {
           url: 'https://psicologiachillan.cl/psychologist-online-session-600.webp',
           width: 1200,
           height: 630,
-          alt: 'Blog de Psicología Online Chillán - Artículos de bienestar mental',
+          alt: 'Blog de Psicología Online Chile - Artículos de salud mental y bienestar',
         },
       ],
       locale: 'es_CL',
@@ -79,7 +79,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 text-balance animate-fade-in-up animate-stagger-2">
-                Blog de Psicología Online Chillán - <span className="text-emerald-600">Próximamente</span>
+                Blog de Psicología Online Chile - <span className="text-emerald-600">Próximamente</span>
               </h1>
               
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">
@@ -121,7 +121,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 text-balance animate-fade-in-up animate-stagger-2">
-              Blog de Psicología Online Chillán - <span className="text-emerald-600">Tu bienestar mental</span>
+              Blog de Psicología Online Chile - <span className="text-emerald-600">Tu bienestar mental</span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto text-pretty leading-relaxed animate-fade-in-up animate-stagger-3">

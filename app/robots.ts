@@ -6,12 +6,25 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/'],
+        disallow: ['/api/', '/admin/', '/_next/', '/studio/'],
       },
       {
         userAgent: 'Googlebot',
+        allow: [
+          '/',
+          '/blog/',
+          '/blog/*',
+        ],
+        disallow: ['/api/', '/admin/', '/studio/'],
+      },
+      {
+        userAgent: 'Googlebot-Image',
+        allow: ['/*.webp', '/*.jpg', '/*.png'],
+      },
+      {
+        userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: ['/api/', '/admin/', '/studio/'],
       },
     ],
     sitemap: 'https://psicologiachillan.cl/sitemap.xml',

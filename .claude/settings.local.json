@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(seo-review)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
