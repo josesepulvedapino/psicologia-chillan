@@ -2,13 +2,13 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Psicología Online Chillán',
-    short_name: 'Psicología Chillán',
-    description: 'Terapia psicológica online profesional en Chillán, Chile. Psicólogos certificados especializados en terapia individual y familiar.',
+    name: 'Psicología Online Chile',
+    short_name: 'Psicología Chile',
+    description: 'Psicólogos online certificados en Chile. Terapia individual, familiar, ansiedad, depresión y trauma. Sesiones por videollamada a todo el país.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#059669',
+    theme_color: '#4a5d52',
     categories: ['health', 'medical', 'lifestyle'],
     icons: [
       {

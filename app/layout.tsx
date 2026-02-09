@@ -19,13 +19,12 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-// SEO 2026 + AI Optimization
 export const metadata: Metadata = {
   title: {
     default: 'Psicólogo Online Chile | Terapia Psicológica Virtual Certificada',
     template: '%s | Psicología Online Chile'
   },
-  description: 'Psicólogos online certificados en Chile. Terapia individual, familiar, trauma complejo, ansiedad y depresión. +500 pacientes atendidos. Sesiones por videollamada desde tu hogar. Primera consulta con descuento.',
+  description: 'Atendemos pacientes en todo Chile por videollamada. Psicólogos certificados con experiencia en ansiedad, depresión, trauma y terapia familiar. Más de 500 personas ya confiaron en nosotros. Agenda tu primera sesión con descuento.',
   keywords: [
     'psicólogo online chile',
     'terapia online chile',
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Psicólogo Online Chile | Terapia Virtual Certificada',
-    description: 'Conecta con psicólogos certificados desde cualquier lugar de Chile. Terapia para ansiedad, depresión, trauma y crecimiento personal. +500 pacientes satisfechos.',
+    description: 'Psicólogos certificados en todo Chile. Terapia para ansiedad, depresión, trauma y crecimiento personal. Más de 500 pacientes atendidos por videollamada.',
     url: 'https://psicologiachillan.cl',
     siteName: 'Psicología Online Chile',
     images: [
@@ -82,7 +81,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Psicólogo Online Chile | Terapia Virtual',
-    description: 'Psicólogos certificados en Chile. Terapia online profesional para tu bienestar mental.',
+    description: 'Psicólogos certificados en Chile. Terapia online profesional para tu salud mental.',
     images: ['/og-image.webp'],
     creator: '@psicologiachile',
     site: '@psicologiachile',
@@ -100,32 +99,23 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'tu-codigo-de-verificacion-google',
-  },
-  // AI Search Optimization (Perplexity, ChatGPT, etc.)
   other: {
-    // Geographic targeting
     'geo.region': 'CL',
     'geo.placename': 'Chile',
     'geo.position': '-33.4489;-70.6693',
     'ICBM': '-33.4489, -70.6693',
-    // Mobile optimization
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
     'apple-mobile-web-app-title': 'Psicología Chile',
     'application-name': 'Psicología Online Chile',
     'mobile-web-app-capable': 'yes',
     'msapplication-TileColor': '#4a5d52',
-    // Content metadata for AI
     'content-language': 'es-CL',
     'distribution': 'global',
     'rating': 'General',
     'revisit-after': '3 days',
-    // AI-specific hints
     'ai-content-declaration': 'human-created',
     'data-freshness': '2026',
-    // Service type for AI understanding
     'service-type': 'telemedicine, psychology, mental-health',
     'target-audience': 'adults seeking therapy in Chile',
     'service-area': 'Chile nationwide',
@@ -155,6 +145,16 @@ export default function RootLayout({
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//wa.me" />
+        <link rel="dns-prefetch" href="//web.whatsapp.com" />
+
+        {/* Preload critical image */}
+        <link
+          rel="preload"
+          href="/psychologist-online-session-600.webp"
+          as="image"
+          type="image/webp"
+        />
 
         {/* AI Search Engine Hints */}
         <meta name="ai-summary" content="Servicio de psicología online en Chile. Ofrecemos terapia individual, familiar, tratamiento de ansiedad, depresión y trauma complejo. Sesiones por videollamada con psicólogos certificados. Atendemos todo Chile." />

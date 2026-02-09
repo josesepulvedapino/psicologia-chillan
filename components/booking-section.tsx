@@ -183,11 +183,11 @@ Enviado desde el formulario web el ${new Date().toLocaleDateString('es-CL')} a l
             className="text-headline text-warm-900 mb-4 md:mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Comienza tu camino hacia{' '}
-            <span className="text-sage-600">el bienestar</span>
+            Agenda tu primera{' '}
+            <span className="text-sage-600">sesión</span>
           </h2>
           <p className="text-body-lg text-warm-500 max-w-2xl mx-auto">
-            Completa el formulario y nos pondremos en contacto contigo para coordinar tu primera sesión
+            Completa el formulario y te contactamos para coordinar día y hora
           </p>
         </div>
 

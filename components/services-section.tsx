@@ -20,40 +20,40 @@ export function ServicesSection() {
     {
       icon: Brain,
       title: "Terapia Individual",
-      description: "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales.",
-      features: ["Evaluación inicial completa", "Terapia reparatoria en trauma", "Plan de tratamiento personalizado", "Seguimiento continuo"],
+      description: "Sesiones uno a uno para trabajar ansiedad, depresión, estrés, trauma complejo u otros problemas emocionales que estés enfrentando.",
+      features: ["Evaluación inicial completa", "Trabajo en trauma con técnicas específicas", "Plan de tratamiento a tu medida", "Seguimiento entre sesiones"],
       image: "/individual-therapy-session-400.webp",
       accent: "sage"
     },
     {
       icon: Users2,
       title: "Terapia Familiar",
-      description: "Mejora la dinámica familiar y crea un ambiente más armonioso en el hogar.",
-      features: ["Dinámicas familiares", "Comunicación intergeneracional", "Resolución de crisis"],
+      description: "Trabajo con toda la familia para mejorar la comunicación, resolver conflictos y fortalecer los vínculos entre sus miembros.",
+      features: ["Mejora de la comunicación familiar", "Resolución de conflictos intergeneracionales", "Intervención en crisis familiares"],
       image: "/family-therapy-session-400.webp",
       accent: "sand"
     },
     {
       icon: Lightbulb,
       title: "Coaching Personal",
-      description: "Desarrolla tu potencial y alcanza tus metas personales y profesionales.",
-      features: ["Definición de objetivos", "Desarrollo de habilidades", "Plan de acción"],
+      description: "Acompañamiento para definir metas claras y construir un plan de acción que te ayude a avanzar en lo personal y profesional.",
+      features: ["Definición de objetivos concretos", "Desarrollo de habilidades", "Plan de acción paso a paso"],
       image: "/personal-coaching-session-400.webp",
       accent: "sage"
     },
     {
       icon: Shield,
       title: "Manejo del Estrés",
-      description: "Técnicas especializadas para manejar el estrés laboral y personal de manera efectiva.",
-      features: ["Técnicas de relajación", "Mindfulness", "Gestión del tiempo"],
+      description: "Herramientas prácticas para reducir el estrés laboral y personal. Aprendes técnicas que puedes aplicar en tu día a día.",
+      features: ["Técnicas de relajación y respiración", "Mindfulness aplicado", "Organización y gestión del tiempo"],
       image: "/stress-management-therapy-400.webp",
       accent: "sand"
     },
     {
       icon: Smile,
       title: "Bienestar Emocional",
-      description: "Programas integrales para mejorar tu autoestima y bienestar general.",
-      features: ["Autoconocimiento", "Inteligencia emocional", "Hábitos saludables"],
+      description: "Un programa orientado a conocerte mejor, fortalecer tu autoestima y generar hábitos que cuiden tu salud mental.",
+      features: ["Autoconocimiento profundo", "Inteligencia emocional", "Construcción de hábitos saludables"],
       image: "/emotional-wellness-session-400.webp",
       accent: "sage"
     },
@@ -140,7 +140,7 @@ export function ServicesSection() {
             <span className="text-sage-600">tu bienestar</span>
           </h2>
           <p className="text-body-lg text-warm-500 max-w-2xl mx-auto">
-            Ofrecemos una amplia gama de servicios psicológicos adaptados a tus necesidades específicas
+            Cada persona tiene necesidades distintas. Por eso ofrecemos distintas líneas de trabajo.
           </p>
         </div>
 

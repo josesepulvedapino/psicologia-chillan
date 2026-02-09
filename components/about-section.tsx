@@ -22,35 +22,35 @@ export function AboutSection() {
     {
       icon: MapPin,
       title: "Atención en Todo Chile",
-      description: "Conectamos contigo desde cualquier región del país",
+      description: "Pacientes de Arica a Punta Arenas, sin importar la ciudad",
       color: "sage"
     },
     {
       icon: Users,
       title: "Equipo Certificado",
-      description: "Psicólogos con experiencia en terapia online",
+      description: "Psicólogos titulados con práctica en terapia online",
       color: "sand"
     },
     {
       icon: Clock,
       title: "Horarios Flexibles",
-      description: "Sesiones adaptadas a tu rutina diaria",
+      description: "Lunes a sábado, en horarios que se ajusten a ti",
       color: "sage"
     },
     {
       icon: Award,
       title: "+500 Pacientes",
-      description: "Han mejorado su bienestar con nosotros",
+      description: "Que ya mejoraron su salud mental con nosotros",
       color: "sand"
     },
   ]
 
   const benefits = [
-    "Sesiones personalizadas según tus necesidades",
-    "Plataforma segura y fácil de usar",
-    "Seguimiento continuo de tu progreso",
-    "Comunicación directa con tu terapeuta",
-    "Flexibilidad para reprogramar citas"
+    "Sesiones individuales según lo que necesitas trabajar",
+    "Videollamada segura y sencilla de usar",
+    "Seguimiento de tu avance entre sesiones",
+    "Comunicación directa con tu psicólogo por WhatsApp",
+    "Posibilidad de reprogramar si surge un imprevisto"
   ]
 
   useEffect(() => {
@@ -154,8 +154,8 @@ export function AboutSection() {
             <span className="text-sage-600">a tu vida</span>
           </h2>
           <p className="text-body-lg text-warm-500 max-w-2xl mx-auto">
-            Ofrecemos un espacio seguro y profesional para tu crecimiento personal,
-            con la flexibilidad que necesitas en tu día a día.
+            Un espacio profesional y seguro para tu salud mental,
+            con la flexibilidad que tu rutina necesita.
           </p>
         </div>
 
@@ -201,12 +201,12 @@ export function AboutSection() {
               className="text-title text-warm-900 mb-4 md:mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Terapia profesional adaptada a ti
+              Atención profesional a tu alcance
             </h3>
             <p className="service-description text-warm-600 mb-6 md:mb-8 leading-relaxed text-base md:text-lg">
-              Nuestro enfoque combina la calidez humana con la tecnología más avanzada
-              para brindarte una experiencia terapéutica única. Cada sesión está diseñada
-              para que te sientas cómodo y seguro en tu proceso de crecimiento personal.
+              Sabemos que dar el primer paso cuesta. Por eso trabajamos para que el proceso
+              sea lo más simple y cómodo posible. Te atendemos por videollamada con el mismo
+              rigor y calidez que en una consulta presencial, pero sin que tengas que salir de tu casa.
             </p>
 
             {/* Benefits list */}

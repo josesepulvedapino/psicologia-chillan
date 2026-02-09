@@ -165,11 +165,11 @@ export function HeroSection() {
               className="text-display font-medium text-warm-900 mb-6 md:mb-8"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Tu espacio seguro{' '}
+              Psicólogo Online{' '}
               <span className="block sm:inline">
-                para{' '}
+                en{' '}
                 <span className="relative inline-block text-sage-600">
-                  sanar
+                  Chile
                   <svg
                     className="absolute -bottom-1 md:-bottom-2 left-0 w-full"
                     viewBox="0 0 200 12"
@@ -187,13 +187,18 @@ export function HeroSection() {
               </span>
             </h1>
 
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-warm-700 mb-4 md:mb-5 font-medium" style={{ fontFamily: 'var(--font-heading)' }}>
+              Terapia profesional desde la comodidad de tu hogar
+            </p>
+
             {/* Description - SEO optimized */}
             <p
               ref={descriptionRef}
               className="hero-description text-body-lg text-warm-600 mb-8 md:mb-10 max-w-xl mx-auto lg:mx-0"
             >
-              Conecta con psicólogos certificados desde cualquier lugar de Chile.
-              Terapia personalizada para ansiedad, depresión, trauma y crecimiento personal.
+              Somos un equipo de psicólogos certificados que atiende por videollamada a todo el país.
+              Trabajamos con ansiedad, depresión, trauma y terapia familiar.
             </p>
 
             {/* CTA Buttons */}

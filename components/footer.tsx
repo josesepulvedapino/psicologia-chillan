@@ -58,7 +58,7 @@ export function Footer() {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "+56999406614"
-    const message = "Hola! Me interesa saber mas sobre los servicios de psicologia online. Podrian brindarme mas informacion?"
+    const message = "Hola, me interesa conocer más sobre los servicios de psicología online. ¿Podrían darme más información?"
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
@@ -110,7 +110,8 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sage-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-              Comprometidos con tu bienestar mental. Terapia psicológica profesional y accesible desde cualquier lugar de Chile.
+              Psicólogos certificados que atienden por videollamada a todo Chile.
+              Terapia individual, familiar y tratamiento de ansiedad, depresión y trauma.
             </p>
             <div className="flex items-center gap-2 text-sand-400">
               <MapPin className="h-4 w-4" aria-hidden="true" />
@@ -155,6 +156,7 @@ export function Footer() {
                 { label: "Nosotros", id: "nosotros" },
                 { label: "Servicios", id: "servicios" },
                 { label: "Testimonios", id: "testimonios" },
+                { label: "Preguntas Frecuentes", id: "preguntas-frecuentes" },
                 { label: "Contacto", id: "contacto" },
               ].map((item) => (
                 <li key={item.id}>

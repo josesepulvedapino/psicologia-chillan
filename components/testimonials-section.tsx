@@ -22,7 +22,7 @@ export function TestimonialsSection() {
       name: "María González",
       age: "32 años",
       location: "Santiago",
-      text: "La terapia online me cambió la vida. Pude trabajar mi ansiedad desde casa, con horarios que se adaptaban a mi trabajo. La psicóloga fue muy empática y profesional.",
+      text: "Llevaba meses postergando ir al psicólogo por falta de tiempo. Cuando descubrí que podía atenderme por videollamada, todo fue más fácil. Mi psicóloga me ayudó mucho con la ansiedad que sentía en el trabajo.",
       rating: 5,
       avatar: "/patient-avatar-maria-48.webp",
     },
@@ -30,7 +30,7 @@ export function TestimonialsSection() {
       name: "Carlos Mendoza",
       age: "28 años",
       location: "Concepción",
-      text: "Excelente servicio. Como hombre, me costaba mucho buscar ayuda psicológica, pero la modalidad online me dio la confianza que necesitaba para comenzar.",
+      text: "Me costó dar el paso de pedir ayuda. La verdad es que la modalidad online me lo hizo menos difícil, porque podía conectarme desde mi pieza sin que nadie supiera. Fue una buena decisión.",
       rating: 5,
       avatar: "/patient-avatar-carlos-48.webp",
     },
@@ -38,7 +38,7 @@ export function TestimonialsSection() {
       name: "Laura Fernández",
       age: "35 años",
       location: "Valparaíso",
-      text: "Después de años luchando con traumas del pasado, encontré la ayuda que necesitaba. La terapia reparatoria me ayudó a sanar y reconstruir mi vida con confianza.",
+      text: "Después de años cargando con traumas que no sabía cómo manejar, por fin encontré un espacio donde me sentí escuchada. La terapia me ayudó a entender muchas cosas y a estar mejor conmigo misma.",
       rating: 5,
       avatar: "/patient-avatar-couple-48.webp",
     },
@@ -133,7 +133,7 @@ export function TestimonialsSection() {
             <span className="text-sage-600">nuestros pacientes</span>
           </h2>
           <p className="text-body-lg text-warm-500 max-w-2xl mx-auto">
-            Testimonios reales de personas que han transformado su bienestar con nuestra ayuda
+            Experiencias reales de personas que decidieron cuidar su salud mental con nosotros
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export function TestimonialsSection() {
 
                 {/* Testimonial text */}
                 <blockquote className="text-warm-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-lg relative z-10">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </blockquote>
 
                 {/* Rating */}

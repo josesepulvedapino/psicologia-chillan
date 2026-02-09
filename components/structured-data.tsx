@@ -1,5 +1,4 @@
 export function StructuredData() {
-  // Comprehensive structured data for SEO 2026 + AI Search Optimization
   const businessData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -9,7 +8,7 @@ export function StructuredData() {
         "@id": "https://psicologiachillan.cl/#organization",
         "name": "Psicología Online Chile",
         "alternateName": ["Psicólogo Online Chile", "Terapia Online Chile", "Psicología Virtual Chile", "Telemedicina Psicológica Chile"],
-        "description": "Servicio profesional de psicología online en Chile. Psicólogos certificados especializados en terapia individual, familiar, trauma complejo, ansiedad y depresión. Atención por videollamada a todo Chile.",
+        "description": "Psicólogos certificados que atienden por videollamada a todo Chile. Terapia individual, familiar, trauma complejo, ansiedad y depresión. Más de 500 pacientes atendidos.",
         "url": "https://psicologiachillan.cl",
         "logo": {
           "@type": "ImageObject",
@@ -85,21 +84,21 @@ export function StructuredData() {
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "author": { "@type": "Person", "name": "María González" },
             "datePublished": "2024-12-15",
-            "reviewBody": "La terapia online me cambió la vida. Pude trabajar mi ansiedad desde casa, con horarios que se adaptaban a mi trabajo."
+            "reviewBody": "Llevaba meses postergando ir al psicólogo por falta de tiempo. La terapia online me lo hizo más fácil. Mi psicóloga me ayudó mucho con la ansiedad que sentía en el trabajo."
           },
           {
             "@type": "Review",
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "author": { "@type": "Person", "name": "Carlos Mendoza" },
             "datePublished": "2024-11-20",
-            "reviewBody": "Excelente servicio. La modalidad online me dio la confianza que necesitaba para comenzar mi proceso terapéutico."
+            "reviewBody": "Me costó dar el paso de pedir ayuda. La modalidad online me lo hizo menos difícil. Fue una buena decisión."
           },
           {
             "@type": "Review",
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "author": { "@type": "Person", "name": "Laura Fernández" },
             "datePublished": "2024-10-05",
-            "reviewBody": "La terapia reparatoria me ayudó a sanar traumas del pasado. Los profesionales son muy empáticos y preparados."
+            "reviewBody": "Después de años cargando con traumas, por fin encontré un espacio donde me sentí escuchada. La terapia me ayudó a entender muchas cosas."
           }
         ],
         "hasOfferCatalog": {
@@ -111,7 +110,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Terapia Individual Online",
-                "description": "Sesiones personalizadas para abordar ansiedad, depresión, estrés, trauma complejo y otros desafíos emocionales",
+                "description": "Sesiones uno a uno para trabajar ansiedad, depresión, estrés, trauma complejo u otros problemas emocionales",
                 "serviceType": "Psicología Clínica"
               }
             },
@@ -120,7 +119,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Terapia Familiar Online",
-                "description": "Mejora la dinámica familiar, comunicación intergeneracional y resolución de conflictos",
+                "description": "Trabajo con toda la familia para mejorar la comunicación, resolver conflictos y fortalecer vínculos",
                 "serviceType": "Terapia Familiar"
               }
             },
@@ -129,7 +128,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Coaching Personal Online",
-                "description": "Desarrollo de potencial, definición de objetivos y alcance de metas personales y profesionales",
+                "description": "Acompañamiento para definir metas claras y construir un plan de acción personal y profesional",
                 "serviceType": "Coaching Personal"
               }
             },
@@ -138,7 +137,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Tratamiento de Ansiedad Online",
-                "description": "Terapia especializada para ansiedad, ataques de pánico y fobias",
+                "description": "Terapia para ansiedad, ataques de pánico y fobias con técnicas basadas en evidencia",
                 "serviceType": "Tratamiento de Ansiedad"
               }
             },
@@ -147,7 +146,7 @@ export function StructuredData() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Tratamiento de Depresión Online",
-                "description": "Apoyo terapéutico profesional para depresión y estados de ánimo",
+                "description": "Apoyo profesional para depresión y estados de ánimo con seguimiento continuo",
                 "serviceType": "Tratamiento de Depresión"
               }
             }
@@ -190,7 +189,7 @@ export function StructuredData() {
           }
         ]
       },
-      // WebPage Schema with Speakable for voice assistants
+      // WebPage Schema
       {
         "@type": "WebPage",
         "@id": "https://psicologiachillan.cl/#webpage",
@@ -198,7 +197,8 @@ export function StructuredData() {
         "name": "Psicólogo Online Chile | Terapia Psicológica Virtual Certificada",
         "isPartOf": { "@id": "https://psicologiachillan.cl/#website" },
         "about": { "@id": "https://psicologiachillan.cl/#organization" },
-        "description": "Psicólogos online certificados en Chile. Terapia individual, familiar y trauma complejo. +500 pacientes atendidos. Agenda tu sesión por WhatsApp.",
+        "description": "Psicólogos online certificados en Chile. Terapia individual, familiar y trauma complejo. Más de 500 pacientes atendidos. Agenda tu sesión por WhatsApp.",
+        "dateModified": new Date().toISOString().split('T')[0],
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": [".hero-description", ".service-description", ".faq-answer", "h1", "h2"]
@@ -215,7 +215,7 @@ export function StructuredData() {
         },
         "mainEntity": { "@id": "https://psicologiachillan.cl/#organization" }
       },
-      // FAQ Page Schema - Optimized for AI search and featured snippets
+      // FAQ Page Schema - matches visible FAQ section
       {
         "@type": "FAQPage",
         "@id": "https://psicologiachillan.cl/#faq",
@@ -225,7 +225,7 @@ export function StructuredData() {
             "name": "¿Cómo funciona la terapia psicológica online en Chile?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La terapia online funciona mediante videollamadas seguras desde cualquier lugar de Chile. El proceso es: 1) Agendas tu cita por WhatsApp al +56 9 9940 6614, 2) Recibes el enlace de videollamada, 3) Te conectas a la hora acordada desde cualquier dispositivo con internet. Las sesiones duran 45-60 minutos, son 100% confidenciales y tienen la misma efectividad que la terapia presencial."
+              "text": "Las sesiones se realizan por videollamada desde cualquier lugar con conexión a internet. Primero agendas tu cita por WhatsApp al +56 9 9940 6614 o por el formulario de esta página. Te enviamos un enlace seguro y a la hora acordada te conectas desde tu computador, tablet o celular. Cada sesión dura entre 45 y 60 minutos. Todo es confidencial."
             }
           },
           {
@@ -233,7 +233,7 @@ export function StructuredData() {
             "name": "¿Cuánto cuesta una sesión de psicólogo online en Chile?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Los precios de las sesiones de psicología online varían según el tipo de terapia (individual, familiar, coaching). Ofrecemos primera sesión con 20% de descuento. Aceptamos transferencia bancaria, tarjetas de crédito/débito y efectivo. Para conocer los valores actualizados, contacta por WhatsApp al +56 9 9940 6614."
+              "text": "Los valores dependen del tipo de terapia que necesites (individual, familiar o coaching). La primera sesión tiene un 20% de descuento. Aceptamos transferencia bancaria, tarjetas de crédito, débito y efectivo. Para conocer los precios actualizados, escríbenos por WhatsApp al +56 9 9940 6614."
             }
           },
           {
@@ -241,7 +241,7 @@ export function StructuredData() {
             "name": "¿Es efectiva la terapia psicológica online?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí, múltiples estudios científicos han demostrado que la terapia online es igual de efectiva que la presencial para tratar ansiedad, depresión, estrés, trauma y otros problemas emocionales. Además ofrece ventajas adicionales: mayor comodidad, ahorro de tiempo en traslados, horarios más flexibles y acceso desde cualquier lugar de Chile."
+              "text": "Sí. La investigación científica respalda que la terapia por videollamada tiene resultados equivalentes a la presencial para tratar ansiedad, depresión, estrés y trauma. Además, permite mayor flexibilidad de horarios, ahorro de tiempo en traslados y la posibilidad de atenderse desde cualquier punto del país."
             }
           },
           {
@@ -249,15 +249,15 @@ export function StructuredData() {
             "name": "¿Qué problemas trata un psicólogo online?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nuestros psicólogos online tratan: ansiedad y ataques de pánico, depresión, estrés laboral y burnout, trauma complejo y TEPT, problemas de pareja y familia, baja autoestima e inseguridad, duelo y pérdidas, fobias específicas, trastornos alimentarios, dificultades en habilidades sociales, y desarrollo personal."
+              "text": "Trabajamos con ansiedad y ataques de pánico, depresión, estrés laboral y burnout, trauma complejo y TEPT, conflictos de pareja y familia, baja autoestima, duelo y pérdidas, fobias, trastornos alimentarios y dificultades en habilidades sociales. También acompañamos procesos de desarrollo personal."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Cómo agendar una cita con psicólogo online en Chile?",
+            "name": "¿Cómo agendo una cita con psicólogo online en Chile?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Puedes agendar tu cita de 3 formas: 1) Por WhatsApp al +56 9 9940 6614 (respuesta inmediata), 2) Completando el formulario en nuestra página web, 3) Por email a psicologiaonlineypresencial14@gmail.com. Te responderemos en menos de 24 horas para confirmar tu horario preferido."
+              "text": "Tienes tres opciones: escribir por WhatsApp al +56 9 9940 6614 (es lo más rápido), completar el formulario de contacto en esta página, o enviar un correo a psicologiaonlineypresencial14@gmail.com. Te respondemos en menos de 24 horas para confirmar día y hora."
             }
           },
           {
@@ -265,7 +265,7 @@ export function StructuredData() {
             "name": "¿Los psicólogos online en Chile están certificados?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí, todos nuestros profesionales son psicólogos titulados de universidades chilenas acreditadas, están inscritos en el Colegio de Psicólogos de Chile, y cumplen con las regulaciones del Ministerio de Salud para telemedicina. Cuentan con años de experiencia en atención clínica presencial y online."
+              "text": "Todos nuestros profesionales son psicólogos titulados de universidades chilenas acreditadas. Están inscritos en el Colegio de Psicólogos de Chile y cumplen con la normativa del Ministerio de Salud para atención por telemedicina. Cuentan con años de práctica clínica tanto presencial como online."
             }
           },
           {
@@ -273,7 +273,7 @@ export function StructuredData() {
             "name": "¿La terapia online es confidencial?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Absolutamente. Utilizamos plataformas de videollamada seguras con encriptación de extremo a extremo. Toda la información compartida está protegida por el secreto profesional y la Ley N°19.628 de Protección de la Vida Privada de Chile. Tu privacidad es nuestra prioridad."
+              "text": "Sí, completamente. Usamos plataformas de videollamada con cifrado de extremo a extremo. Toda la información que compartes está protegida por el secreto profesional y por la Ley N°19.628 de Protección de la Vida Privada. Tu privacidad es parte central de nuestro trabajo."
             }
           },
           {
@@ -281,17 +281,17 @@ export function StructuredData() {
             "name": "¿Atienden psicólogos online en todo Chile?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí, al ser un servicio 100% online, atendemos pacientes en todas las regiones de Chile: Santiago, Concepción, Valparaíso, Viña del Mar, Temuco, Antofagasta, Chillán, Talca, Puerto Montt, Rancagua, La Serena, Iquique y cualquier otra ciudad. Solo necesitas una conexión estable a internet."
+              "text": "Sí. Al ser un servicio 100% online, atendemos pacientes en todas las regiones: Santiago, Concepción, Valparaíso, Viña del Mar, Temuco, Antofagasta, Chillán, Talca, Puerto Montt, Rancagua, La Serena, Iquique y cualquier otra ciudad o localidad del país. Solo necesitas internet estable."
             }
           }
         ]
       },
-      // HowTo Schema for booking process
+      // HowTo Schema
       {
         "@type": "HowTo",
         "@id": "https://psicologiachillan.cl/#howto",
         "name": "Cómo agendar una cita de psicología online en Chile",
-        "description": "Guía paso a paso para reservar tu primera sesión de terapia psicológica online",
+        "description": "Pasos para reservar tu primera sesión de terapia psicológica online",
         "totalTime": "PT5M",
         "step": [
           {
@@ -304,20 +304,20 @@ export function StructuredData() {
           {
             "@type": "HowToStep",
             "position": 2,
-            "name": "Selecciona tu servicio",
-            "text": "Indica qué tipo de terapia necesitas: individual, familiar, coaching, manejo del estrés, etc."
+            "name": "Indica qué servicio necesitas",
+            "text": "Cuéntanos si buscas terapia individual, familiar, coaching, manejo del estrés u otro servicio"
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "Elige tu horario",
-            "text": "Selecciona el día y hora que mejor se adapte a tu rutina. Horarios de lunes a viernes 9:00-20:00 y sábados 10:00-16:00"
+            "text": "Selecciona el día y hora que mejor se ajuste a tu rutina. Atendemos de lunes a viernes de 9:00 a 20:00 y sábados de 10:00 a 16:00"
           },
           {
             "@type": "HowToStep",
             "position": 4,
-            "name": "Recibe confirmación",
-            "text": "Te enviaremos un mensaje confirmando tu cita junto con el enlace de videollamada"
+            "name": "Recibe la confirmación",
+            "text": "Te enviamos un mensaje confirmando tu cita junto con el enlace de videollamada"
           },
           {
             "@type": "HowToStep",
